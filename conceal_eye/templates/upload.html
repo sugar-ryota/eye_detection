@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Polls App</title>
+</head>
+<body>
+    <h1>Welcome to Conceal Eye app!</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">アップロード</button>
+    </form>
+    
+    {% if video %}
+        <a href="{{ video.video_file.url }}">動画をダウンロードする</a>
+    {% endif %}
+</body>
+</html>
