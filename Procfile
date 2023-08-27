@@ -1,0 +1,1 @@
+web: gunicorn eye_detection.wsgi
